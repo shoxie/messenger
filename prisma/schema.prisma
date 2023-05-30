@@ -61,3 +61,9 @@ model VerificationToken {
   @@unique([identifier, token])
   @@map("verificationtokens")
 }
+
+model Message {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  message   String
+  createdAt DateTime
+}
